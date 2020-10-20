@@ -1,1 +1,0 @@
-Plotly = window.window.Plotly;
