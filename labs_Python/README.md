@@ -1,15 +1,16 @@
-# Python in Power BI
+# Guía Python in Power BI
+Esta guía está actualizada con la versión 3.8.5 de Python a octubre 2020. Para las siguientes actualizaciones por favor revisar la documentación oficial de Python y de Power BI.
 
-1. Instalar Miniconda3 en vuestro sistema operativo Windows
+### 1. Instalar Miniconda3 en vuestro sistema operativo Windows
 Pueden instalar directamente desde el enlace oficial versión 64bits 
 [Miniconda Python3.8 Windows64bits](https://docs.conda.io/en/latest/miniconda.html)
 
 
-2. Crear entorno virtual
+### 2. Crear entorno virtual
 Para que funcione correctamente Python en Power BI, creamos un entorno virtual para poder instalar nuestras dependencias (librerías y módulos de programación) en la versión Python 3.x
 
 - buscamos y entramos en **miniconda3/anaconda Prompt** o **miniconda3/PowerShell** para ejecutar secuencias de comandos
-- una vez dentro nos encontraremos en 
+- una vez dentro nos encontraremos en: 
 
 `(base)PS<C:\Users\<nombre-usuario>>`
 
@@ -25,30 +26,33 @@ Se realizará una operación de instalación del entorno que tardará unos minut
 conda activate <nombre entorno>
 ```
 
-y nos encontraremos ahora dentro de esta ruta
+y nos encontraremos ahora dentro de esta ruta:
+
 `(nombre entorno) PS C:\Users\<nombre usuario>>`
 
 y desde aquí procedemos con el siguiente paso
 
-3. Comprobación de Python
+### 3. Comprobación de Python
 ejecutamos python y nos encontraremos con el entorno de Python3.x
 
 ```{shell}
 python
 ```
 Y este es el ejemplo:
-`
+
+```
 Python 3.8.5 (default, Sep  3 2020, 21:29:08) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
-`
-para salir
+```
+
+para salir de Python:
 
 ```{python}
 exit()
 ```
 
-4. Instalamos los paquetes necesarios
+### 4. Instalamos los paquetes necesarios
 Para instalar los paquetes / librerías necesarias para tratar datos en Python / Power BI podemos hacerlo de forma manual:
 
 ```{shell}
@@ -62,6 +66,7 @@ notes requirements_pbi.txt
 ```
 
 Se abrirá el *bloc de notas* y copiar y pegar los que viene a continuación:
+
 ```{text}
 pandas
 numpy
@@ -70,7 +75,7 @@ seaborn
 scikit-learn
 ```
 
-guardamos y seguimos
+guardamos y seguimos:
 
 ```{shell}
 pip install -r requirements_pbi.txt
@@ -78,7 +83,7 @@ pip install -r requirements_pbi.txt
 
 ejecutamos y observaremos las instalaciones de estas librerías
 
-5. Prueba en Power BI
+### 5. Prueba en Power BI
 
 Una vez instaladas las dependencias podemos entramos en **Power BI** y realizar el cambio en las configuraciones:
 
@@ -91,9 +96,10 @@ seleccionar vuestra ruta del entorno virtual creado anteriormente al paso 2 como
 
 En caso de disponer **Anaconda** será el equivalente sustituyendo miniconda con el Anaconda.
 
-## Get Data in Python environment
+## Get Data in Python environment in Power BI
+Realizamos las operaciones de ETL (extract, transform, load) así como crear elementos visuales con Python.
 
-6. Prueba con librería **datasets**
+### 6. Prueba con librería **datasets**
 
 Desde `Get Data` probamos a introducir un pequeño comando de Python y ver si creamos un dataframe desde cero
 
@@ -112,7 +118,7 @@ df = pd.DataFrame({
 
 Se cargará la tabla y si validamos ya está realizada la primera operación de Python en Power BI.
 
-7. Creamos un gráfico
+### 7. Creamos un gráfico
 Seleccionando el elemento de Python procedemos a crear un `scatterplot`
 
 ```{python}
